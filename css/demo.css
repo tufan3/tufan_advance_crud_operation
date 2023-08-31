@@ -1,0 +1,46 @@
+.logininfo {
+    margin-top: 100px;
+}
+
+/* icon design */
+.icon-design {
+    position: relative;
+}
+
+.icon-design i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.icon-design input {
+    padding-left: 30px;
+}
+
+/* first and last name design */
+.name_design {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* underline_info */
+.underline_info {
+    text-decoration: none;
+    color: white;
+}
+
+.underline_info:hover {
+    color: red;
+}
+
+/* social box icon */
+.social_box_icon {
+    color: white;
+}
+
+.social_box_icon:hover {
+    color: #3b5998;
+}
