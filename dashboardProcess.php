@@ -5,7 +5,7 @@ $results = mysqli_query($conn, $sql);
 if (mysqli_num_rows($results) > 0) {
     while ($row = mysqli_fetch_array($results)) { ?>
         <tr>
-            <td class="stud_id">
+            <td class="profile_id">
                 <?php echo $row['id'] ?>
             </td>
             <td>
@@ -36,15 +36,9 @@ if (mysqli_num_rows($results) > 0) {
                 <?php echo $row['comments'] ?>
             </td>
             <td>
-                <a href="#" class="badge badge-success edit_btn"><i class="fa-regular fa-pen-to-square"></i>
+                <a href="#" class="badge badge-success update_btn"><i class="fa-regular fa-pen-to-square"></i>
                 </a>
-
-                <!-- <button type="button" class="btn btn-primary edit_btn" data-bs-toggle="modal" data-bs-target="#updateModal">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                </button> -->
-
-
-                <a href="" class="badge badge-danger"><i class="fa-solid fa-trash-can"></i></a>
+                <a href="#" class="badge badge-danger delete_btn"><i class="fa-solid fa-trash-can"></i></a>
             </td>
         </tr>
 

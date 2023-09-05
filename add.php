@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_query($conn, $sql) == true) {
         move_uploaded_file($tmpname, $uploction);
-        $_SESSION['status'] = "Successfully save";
+        $_SESSION['status'] = '<div class="alert alert-success">Successfully Add</div>';
         header('location:dashboard.php');
     } else {
         $_SESSION['status'] = "Not save";

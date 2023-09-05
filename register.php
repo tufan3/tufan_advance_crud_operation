@@ -47,10 +47,6 @@
                         placeholder="name@example.com">
                 </div>
 
-                <!-- <div class="form-group mb-4">
-                    <input type="file" name="image" id="image" placeholder="image" required>
-                </div> -->
-
 
                 <div class="form-group mb-4 icon-design">
                     <i class="fa-solid fa-key"></i>

@@ -29,7 +29,7 @@
                                 <img src="images/telephone-white.png" width="12px" alt="">
                             </div>
                             <p>
-                                +8801*********
+                                +8801303480281
                             </p>
                         </div>
                         <div>
@@ -37,7 +37,7 @@
                                 <img src="images/envelope-white.png" width="18px" alt="">
                             </div>
                             <p>
-                                demo@gmail.com
+                                robiultufan.dev@gmail.com
                             </p>
                         </div>
                     </div>
@@ -90,13 +90,13 @@
                             </button>
                         </form>
                         <div class="social_box fa-2x">
-                            <a class="social_box_icon" href="#">
+                            <a class="social_box_icon" href="https://www.facebook.com/robiul.tufan3/">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                             <a class="social_box_icon" href="#">
                                 <i class="fa-brands fa-twitter"></i>
                             </a>
-                            <a class="social_box_icon" href="#">
+                            <a class="social_box_icon" href="https://www.linkedin.com/in/tufan3/">
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
                             <a class="social_box_icon" href="#">

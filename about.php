@@ -33,7 +33,6 @@
 
 
   <!-- who section -->
-
   <section class="who_section layout_padding">
     <div class="container">
       <div class="row">
@@ -65,7 +64,6 @@
       </div>
     </div>
   </section>
-
   <!-- end who section -->
 
 
@@ -74,6 +72,8 @@
   include "footer.php";
   ?>
   <!-- info section && footer section -->
+
+
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -100,7 +100,6 @@
     });
   </script>
   <!-- end owl carousel script -->
-
 </body>
 
 </html>
