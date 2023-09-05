@@ -30,12 +30,34 @@ $(document).ready(function () {
                     // education
                     // $('#bsc[value="' + value['education'] + '"]').prop('checked', true);
 
-                    if (response.education && response.education.length > 0) {
-                        response.education.forEach(function (value) {
-                            $('#bsc' + value).prop('checked', true);
-                        });
+                    console.log('Education value from AJAX:', value['education']);
+
+                    if (value['education'] === 'ssc') {
+                        console.log('Setting SSC checkbox as checked');
+                        $('#ssc').prop('checked', true);
+                    } else if (value['education'] === 'hsc') {
+                        console.log('Setting HSC checkbox as checked');
+                        $('#hsc').prop('checked', true);
+                    } else if (value['education'] === 'bsc') {
+                        console.log('Setting BSc checkbox as checked');
+                        $('#bsc').prop('checked', true);
+                    } else if (value['education'] === 'msc') {
+                        console.log('Setting MSc checkbox as checked');
+                        $('#msc').prop('checked', true);
                     }
 
+                    //updated code 
+                    // if (response.education && response.education.length > 0) {
+                    //     response.education.forEach(function (value) {
+                    //         $('#' + value).prop('checked', true);
+                    //     });
+                    // }
+
+                    // var education = value['education'].split(", "); // Convert education text to an array
+
+                    // education.forEach(function (edu) {
+                    //     $('#' + edu).prop('checked', true);
+                    // });
 
 
                     // genter

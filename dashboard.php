@@ -162,7 +162,7 @@ session_start();
 
                         <br><br>
 
-                        <label>Education:</label>
+                        <label for='education'>Education:</label>
                         <input type="checkbox" id="ssc" name="education[]" value="ssc">
                         <label for="ssc">SSC</label>
                         <input type="checkbox" id="hsc" name="education[]" value="hsc">

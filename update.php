@@ -39,6 +39,8 @@ if (isset($_POST['save_update'])) {
     $dob = $_POST['dob'];
     $education = isset($_POST['education']) ? $_POST['education'] : [];
     $educationValues = implode(", ", $education);
+    //printing the value
+    echo "Education Values: " . $educationValues;
     $gender = $_POST['gender'];
     $comments = $_POST['comments'];
 
