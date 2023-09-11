@@ -18,9 +18,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "Reply-To: $email\r\n";
 
     // Send email
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Thank you for contacting us. We will get back to you soon.";
-    } else {
-        echo "Oops! Something went wrong. Please try again later.";
-    }
+    mail($to, $subject, $message, $headers);
 }

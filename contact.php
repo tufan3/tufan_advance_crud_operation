@@ -53,8 +53,7 @@ if (!isset($_SESSION['user_email'])) {
                 <input class="bg-white opacity-75" type="text" placeholder="Full Name" id="name" name="name" required>
               </div>
               <div>
-                <input class="bg-white opacity-75" type="text" placeholder="Phone Number" name="phone_number"
-                  id="phone_number">
+                <input class="bg-white opacity-75" type="text" placeholder="Phone Number" name="phone" id="phone">
               </div>
               <div>
                 <input class="bg-white opacity-75 " type="email" placeholder="Email Address" id="email" name="email"
