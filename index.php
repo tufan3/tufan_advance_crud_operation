@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_email'])) {
+  header("Location: login.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +30,7 @@
 <body>
   <div class="hero_area">
     <?php
-    include "header.php";
+    include "dashboardHeader.php";
     ?>
     <!-- end header section -->
     <!-- slider section -->
@@ -53,7 +60,7 @@
                         labore
                       </p>
                       <div class="">
-                        <a href="">
+                        <a style="text-decoration: none;" href="contact.php">
                           Contact us
                         </a>
                       </div>
@@ -79,7 +86,7 @@
                         labore
                       </p>
                       <div class="">
-                        <a href="">
+                        <a style="text-decoration: none;" href="contact.php">
                           Contact us
                         </a>
                       </div>
@@ -105,7 +112,7 @@
                         labore
                       </p>
                       <div class="">
-                        <a href="">
+                        <a style="text-decoration: none;" href="contact.php">
                           Contact us
                         </a>
                       </div>
@@ -136,13 +143,43 @@
         </p>
       </div>
       <div class="do_container">
-        <div class="box arrow-start arrow_bg">
+        <div class="box arrow-middle arrow_bg">
           <div class="img-box">
-            <img src="images/d-1.png" alt="">
+            <img src="images/d-3.png" alt="">
           </div>
           <div class="detail-box">
             <h6>
-              Marketing
+              HTML5
+            </h6>
+          </div>
+        </div>
+        <div class="box arrow-end arrow_bg">
+          <div class="img-box">
+            <img src="images/d-4.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              CSS
+            </h6>
+          </div>
+        </div>
+        <div class="box arrow-start arrow_bg">
+          <div class="img-box">
+            <img src="images/js.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              JavaScript
+            </h6>
+          </div>
+        </div>
+        <div class="box arrow-start arrow_bg">
+          <div class="img-box">
+            <img src="images/php.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              PHP
             </h6>
           </div>
         </div>
@@ -153,26 +190,6 @@
           <div class="detail-box">
             <h6>
               Development
-            </h6>
-          </div>
-        </div>
-        <div class="box arrow-middle arrow_bg">
-          <div class="img-box">
-            <img src="images/d-3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h6>
-              Html5
-            </h6>
-          </div>
-        </div>
-        <div class="box arrow-end arrow_bg">
-          <div class="img-box">
-            <img src="images/d-4.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h6>
-              Css
             </h6>
           </div>
         </div>
@@ -425,7 +442,37 @@
               </div>
             </div>
             <div class="col-md-5 map_img-box">
-              <img src="images/map-img.png" alt="">
+              <div class="col-md-12 m-4 text-black">
+                <div class="info_contact">
+                  <h5>
+                    Quick Contact
+                  </h5>
+                  <div class="d-flex p-2">
+                    <div class="img-box">
+                      <img class="w-50" src="images/location-black.png" width="18px" alt="">
+                    </div>
+                    <p>
+                      Ibrahimpur, Kafrul, Dhaka-1206
+                    </p>
+                  </div>
+                  <div class="d-flex p-2">
+                    <div class="img-box">
+                      <img class="w-50" src="images/telephone-black.png" alt="">
+                    </div>
+                    <p>
+                      +8801303480281
+                    </p>
+                  </div>
+                  <div class="d-flex p-2 gap-4">
+                    <div class="img-box">
+                      <img class="" src="images/email.png" alt="">
+                    </div>
+                    <p>
+                      robiultufan.dev@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ if (isset($_POST['save_update'])) {
     if ($_FILES["image"]["size"] != 0) {
         $image = $_FILES['image']['name'];
         $tmpname = $_FILES['image']['tmp_name'];
-        $uploction = 'images/' . $image;
+        $uploction = 'images/upload/' . $image;
         move_uploaded_file($tmpname, $uploction);
     } else {
         $image = $_POST['image_old'];
@@ -37,10 +37,11 @@ if (isset($_POST['save_update'])) {
     $lname = $_POST['lname'];
     $district = $_POST['district'];
     $dob = $_POST['dob'];
-    $education = isset($_POST['education']) ? $_POST['education'] : [];
+    $education = isset($_POST['update_education']) ? $_POST['update_education'] : [];
     $educationValues = implode(", ", $education);
     //printing the value
-    echo "Education Values: " . $educationValues;
+    // echo "Education Values: " . $educationValues;
+
     $gender = $_POST['gender'];
     $comments = $_POST['comments'];
 

@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     $user_email = $_POST['user_email'];
     $user_password = $_POST['user_password'];
     $confirm_password = $_POST['confirm_password'];
-    // $md5Password = md5($user_password);
+    $md5Password = md5($user_password);
 
     $errors = array();
 
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
 
 
     if (empty($errors)) {
-        $sql = "INSERT INTO users (first_name, last_name, user_email, user_password) VALUES ('$first_name','$last_name', '$user_email', '$user_password')";
+        $sql = "INSERT INTO users (first_name, last_name, user_email, user_password) VALUES ('$first_name','$last_name', '$user_email', '$md5Password')";
         $results = mysqli_query($conn, $sql);
         if ($results) {
             echo "

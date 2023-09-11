@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_email'])) {
+  header("Location: login.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -20,12 +27,12 @@
   ?>
 </head>
 
-<body class="sub_page">
+<body class="sub_page background_image logininfo">
   <div class="hero_area">
 
     <!-- header section strats -->
     <?php
-    include "header.php";
+    include "dashboardHeader.php";
     ?>
     <!-- end header section -->
 
@@ -33,18 +40,18 @@
 
 
   <!-- who section -->
-  <section class="who_section layout_padding">
+  <section class="who_section layout_padding ">
     <div class="container">
       <div class="row">
         <div class="col-md-5">
           <div class="img-box">
-            <img src="images/who-img.jpg" alt="">
+            <img class="opacity-75" src="images/about-us.jpeg" alt="">
           </div>
         </div>
         <div class="col-md-7">
-          <div class="detail-box">
+          <div class="detail-box text-white">
             <div class="heading_container">
-              <h2>
+              <h2 class="mx-auto">
                 WHO WE ARE?
               </h2>
             </div>
@@ -55,7 +62,7 @@
               veniam, quis nostrud
             </p>
             <div>
-              <a href="">
+              <a href="#">
                 Read More
               </a>
             </div>

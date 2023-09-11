@@ -12,9 +12,9 @@
     <header class="header_section mb-5">
         <div class="container-fluid navbar-dark fixed-top bg-dark">
             <nav class="navbar navbar-expand-lg custom_nav-container m-0">
-                <a class="navbar-brand" href="index.php">
+                <a class="navbar-brand" href="#">
                     <span>
-                        Esigned
+                        Tufan
                     </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -25,36 +25,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                        <ul class="navbar-nav  ">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.php"> About </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="do.php"> What we do </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="portfolio.php"> Portfolio </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.php">Contact us</a>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="cv.php">cv</a>
-                            </li> -->
-                        </ul>
+
                         <div class="user_option">
                             <a href="login.php">
                                 <img src="images/user.png" alt="">
                             </a>
-
-
-
-                            <!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                            </form> -->
                         </div>
                     </div>
                 </div>

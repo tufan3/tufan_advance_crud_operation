@@ -4,7 +4,7 @@ include 'database/connect.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $profilePicture = $_FILES['profilePicture']['name'];
     $tmpname = $_FILES['profilePicture']['tmp_name'];
-    $uploction = 'images/' . $profilePicture;
+    $uploction = 'images/upload/' . $profilePicture;
 
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
@@ -19,13 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO `profile`(`fname`, `lname`, `profilePicture`, `district`, `date_of_birth`, `education`, `gender`, `comments`) VALUES ('$fname','$lname','$profilePicture','$district','$dob','$educationValues','$gender','$comments')";
 
-
     if (mysqli_query($conn, $sql) == true) {
         move_uploaded_file($tmpname, $uploction);
         $_SESSION['status'] = '<div class="alert alert-success">Successfully Add</div>';
         header('location:dashboard.php');
     } else {
-        $_SESSION['status'] = "Not save";
+        $_SESSION['status'] = '<div class="alert alert-danger">Not Add into database</div>';
 
     }
 

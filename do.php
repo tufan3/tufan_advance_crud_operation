@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_email'])) {
+  header("Location: login.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -19,11 +26,11 @@
   ?>
 </head>
 
-<body class="sub_page">
+<body class="sub_page background_image">
   <div class="hero_area">
     <!-- header section strats -->
     <?php
-    include "header.php";
+    include "dashboardHeader.php";
     ?>
     <!-- end header section -->
   </div>
@@ -31,7 +38,7 @@
   <!-- do section -->
 
   <section class="do_section layout_padding mt-4">
-    <div class="container">
+    <div class="container text-white">
       <div class="heading_container">
         <h2>
           What we do
@@ -42,13 +49,43 @@
         </p>
       </div>
       <div class="do_container">
-        <div class="box arrow-start arrow_bg">
+        <div class="box arrow-middle arrow_bg">
           <div class="img-box">
-            <img src="images/d-1.png" alt="">
+            <img src="images/d-3.png" alt="">
           </div>
           <div class="detail-box">
             <h6>
-              Marketing
+              HTML5
+            </h6>
+          </div>
+        </div>
+        <div class="box arrow-end arrow_bg">
+          <div class="img-box">
+            <img src="images/d-4.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              CSS
+            </h6>
+          </div>
+        </div>
+        <div class="box arrow-start arrow_bg">
+          <div class="img-box">
+            <img src="images/js.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              JavaScript
+            </h6>
+          </div>
+        </div>
+        <div class="box arrow-start arrow_bg">
+          <div class="img-box">
+            <img src="images/php.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              PHP
             </h6>
           </div>
         </div>
@@ -59,26 +96,6 @@
           <div class="detail-box">
             <h6>
               Development
-            </h6>
-          </div>
-        </div>
-        <div class="box arrow-middle arrow_bg">
-          <div class="img-box">
-            <img src="images/d-3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h6>
-              Html5
-            </h6>
-          </div>
-        </div>
-        <div class="box arrow-end arrow_bg">
-          <div class="img-box">
-            <img src="images/d-4.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h6>
-              Css
             </h6>
           </div>
         </div>

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_email'])) {
+  header("Location: login.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -19,21 +26,21 @@
   ?>
 </head>
 
-<body class="sub_page">
+<body class="sub_page background_image">
   <div class="hero_area">
     <!-- header section strats -->
     <?php
-    include "header.php";
+    include "dashboardHeader.php";
     ?>
     <!-- end header section -->
   </div>
 
 
   <!-- work section -->
-  <section class="work_section layout_padding mt-4">
+  <section class="work_section layout_padding mt-4 text-white">
     <div class="container">
       <div class="heading_container">
-        <h2>
+        <h2 class="mx-auto">
           CREATIVE WORKS
         </h2>
         <p>

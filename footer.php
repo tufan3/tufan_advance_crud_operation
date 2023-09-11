@@ -81,14 +81,8 @@
                 <div class="col-md-3">
                     <div class="info_form ">
                         <h5>
-                            Newsletter
+                            Social Media
                         </h5>
-                        <form action="">
-                            <input type="email" placeholder="Enter your email">
-                            <button>
-                                Subscribe
-                            </button>
-                        </form>
                         <div class="social_box fa-2x">
                             <a class="social_box_icon" href="https://www.facebook.com/robiul.tufan3/">
                                 <i class="fa-brands fa-facebook-f"></i>
@@ -116,7 +110,7 @@
     <section class="container-fluid footer_section">
         <p>
             &copy; 2023 All Rights Reserved By
-            <a href="https://html.design/">Tufan</a>
+            <a href="https://www.linkedin.com/in/tufan3/">Md Robiul Islam Tufan</a>
         </p>
     </section>
 </body>

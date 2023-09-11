@@ -7,7 +7,6 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
 </head>
 
 <body>
@@ -43,20 +42,31 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.php">Contact us</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="cv.php">cv</a>
-                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="dashboard.php">Dashboard</a>
+                            </li>
                         </ul>
-                        <div class="user_option">
-                            <a href="logout.php">
-                                <img src="images/user.png" alt="">
-                            </a>
-
-
-
-                            <!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                            </form> -->
+                        <div>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Profile
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                        <li>
+                                            <!-- <a class="dropdown-item" href="#">Profile</a> -->
+                                            <button type="button" class="dropdown-item" data-bs-toggle="modal"
+                                                data-bs-target="#profileModal">
+                                                Profile
+                                            </button>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Change
+                                                Password</a></li>
+                                        <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

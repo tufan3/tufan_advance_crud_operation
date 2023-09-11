@@ -10,14 +10,14 @@
     ?>
 </head>
 
-<body>
+<body class="background_image">
     <!-- header link -->
     <?php
     include "header.php";
     ?>
 
-    <div class="logininfo">
-        <div class="mx-auto w-25 h-100 border border-info-subtle shadow rounded p-4 m-5">
+    <div class="logininfo ">
+        <div class="mx-auto my-auto w-50 h-100 border border-info-subtle shadow rounded p-4 m-5">
             <form action="loginProcess.php" method="post">
 
                 <!-- design part -->
@@ -35,16 +35,17 @@
                         name="user_password" placeholder="Enter your Password" required>
                 </div>
 
-                <button class="btn btn-primary mb-3 d-grid col-12 rounded-pill" type="submit"
+                <button class="btn btn-primary mb-3 d-grid col-12 rounded-pill fs-4 fw-bold" type="submit"
                     name="submit">Login</button>
-                <p class="text-center">Not an account?<a style="text-decoration: none;" href="register.php">Register</a>
+                <p class="text-center text-danger">Not an account?<a class="underline_info"
+                        href="register.php">Register</a>
                 </p>
             </form>
         </div>
     </div>
     <!-- footer link -->
     <?php
-    include "footer.php";
+    // include "footer.php";
     ?>
 </body>
 

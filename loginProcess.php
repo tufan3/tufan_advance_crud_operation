@@ -9,7 +9,8 @@ if (isset($_POST['submit'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        header("location:dashboard.php");
+        $_SESSION['user_email'] = $user_email;
+        header("location:index.php");
     } else {
         // Invalid credentials
         header("location:login.php");

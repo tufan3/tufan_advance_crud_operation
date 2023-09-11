@@ -1,5 +1,15 @@
 .logininfo {
-    margin-top: 100px;
+    margin-top: 150px;
+
+}
+
+/* background image  */
+.background_image {
+    background-image: url('../images/hero-bg.jpg');
+}
+
+.background_image_contact {
+    background-image: url('../images/contact-us.jpg');
 }
 
 /* icon design */
@@ -19,6 +29,8 @@
     padding-left: 30px;
 }
 
+
+
 /* first and last name design */
 .name_design {
     display: flex;
@@ -33,7 +45,7 @@
 }
 
 .underline_info:hover {
-    color: red;
+    color: blue;
 }
 
 /* social box icon */
