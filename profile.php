@@ -11,7 +11,7 @@ $row = mysqli_fetch_assoc($results);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Tufan</title>
 
     <?php
     include 'link.php';

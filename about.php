@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_email'])) {
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>LEOTECH</title>
+  <title>Tufan</title>
 
 
   <?php
