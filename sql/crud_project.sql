@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2023 at 07:59 AM
+-- Generation Time: Sep 11, 2023 at 04:53 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -24,45 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `add_item`
+-- Table structure for table `districts`
 --
 
-CREATE TABLE `add_item` (
-  `item_id` int(11) NOT NULL,
-  `name` varchar(200) NOT NULL,
-  `time` datetime NOT NULL DEFAULT current_timestamp()
+CREATE TABLE `districts` (
+  `district_id` int(11) NOT NULL,
+  `district_name` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `add_item`
+-- Dumping data for table `districts`
 --
 
-INSERT INTO `add_item` (`item_id`, `name`, `time`) VALUES
-(1, 'fcsde', '2023-08-27 03:25:06'),
-(2, 'njn', '2023-08-27 03:26:46');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cruds`
---
-
-CREATE TABLE `cruds` (
-  `id` int(11) NOT NULL,
-  `name` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `cruds`
---
-
-INSERT INTO `cruds` (`id`, `name`) VALUES
-(1, 'sdfd'),
-(2, 'gfdg'),
-(3, 'p86'),
-(4, 'rfersf'),
-(5, '5g56'),
-(6, '');
+INSERT INTO `districts` (`district_id`, `district_name`) VALUES
+(1, 'Dhaka'),
+(2, 'Rajshahi'),
+(3, 'Khulna'),
+(4, 'Chattogram'),
+(5, 'Rangpur'),
+(6, 'Sylhet'),
+(7, 'Barishal');
 
 -- --------------------------------------------------------
 
@@ -87,11 +68,13 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `fname`, `lname`, `profilePicture`, `district`, `date_of_birth`, `education`, `gender`, `comments`) VALUES
-(10, 'grtg', 'grf', '', 'dhaka', '2023-08-01', 'ssc', 'male', 'errf'),
-(13, 'sfs', 'fesd', '', 'dhaka', '2023-08-02', 'hsc', 'male', 'cfsdec'),
-(14, 'scfsdc', 'sdcfsd', 0x547566616e2e6a7067, 'dhaka', '2023-08-18', 'ssc', 'male', 'sdcsd'),
-(15, 'robiul', 'islam', 0x32303231303332325f3138343135302e6a7067, 'dhaka', '2023-08-05', 'bsc', 'male', 'ferf'),
-(16, 'test', '', '', 'dhaka', '2023-08-24', 'ssc', 'male', 'nothing');
+(1, 'gtr', 'grt', 0x6d657373692e6a706567, 'Dhaka', '2023-09-07', 'bsc, msc', 'male', 'gtrg'),
+(2, 'robiul', 'islam', 0x312e6a706567, 'Khulna', '2023-08-05', 'bsc', 'male', 'tufan'),
+(42, '', '', 0x696d61676573322e6a706567, 'Dhaka', '2023-08-30', 'ssc, hsc, bsc, msc', 'male', 'hjtyhdfsx  '),
+(44, 'robiul', '', 0x342e6a706567, 'Barishal', '2023-09-13', 'hsc', 'male', 'y5g5'),
+(46, '', '', 0x322e6a706567, 'Sylhet', '2023-09-05', 'ssc, hsc', 'male', 'drdf'),
+(47, 'robiul', 'hjgh', 0x6e2e6a706567, 'Dhaka', '2023-09-04', 'ssc, hsc', 'male', 'ghg'),
+(48, 'Leo', 'Messi', 0x6d657373692e6a706567, 'Dhaka', '2023-09-07', 'ssc, hsc, bsc', 'male', 'Hi');
 
 -- --------------------------------------------------------
 
@@ -113,26 +96,20 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `user_email`, `user_password`) VALUES
 (1, 'Robiul', 'Islam', 'robiul@gmail.com', '123456'),
-(2, 'Robiul', 'Islam', 'robiul@gmail.com', '123456'),
-(3, 'Robiul', 'Islam', 'islam@gmail.com', '123456'),
 (4, 'Robiul', 'Islam', 'islam@gmail.com', '123456'),
-(5, 'Robiul', 'Islam', 'islam@gmail.com', '123456');
+(6, 'Robiul', 'Islam', 'tufan@gmail.com', '123456'),
+(7, 'Robiul', 'Islam', 'tufan.com@gmail.com', '123456'),
+(8, 'Robiul', 'Islam', 'tufan@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `add_item`
+-- Indexes for table `districts`
 --
-ALTER TABLE `add_item`
-  ADD PRIMARY KEY (`item_id`);
-
---
--- Indexes for table `cruds`
---
-ALTER TABLE `cruds`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `districts`
+  ADD PRIMARY KEY (`district_id`);
 
 --
 -- Indexes for table `profile`
@@ -151,28 +128,22 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `add_item`
+-- AUTO_INCREMENT for table `districts`
 --
-ALTER TABLE `add_item`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `cruds`
---
-ALTER TABLE `cruds`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+ALTER TABLE `districts`
+  MODIFY `district_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
