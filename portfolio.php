@@ -43,7 +43,7 @@ if (!isset($_SESSION['user_email'])) {
         <h2 class="mx-auto">
           CREATIVE WORKS
         </h2>
-        <p>
+        <p class="mx-auto">
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation
         </p>

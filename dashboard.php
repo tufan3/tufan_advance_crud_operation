@@ -269,7 +269,7 @@ include 'database/connect.php';
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered border-primary text-center" id="mytable">
-                            <thead class="table-dark">
+                            <thead class="table-dark opacity-75">
                                 <tr>
                                     <th scope="col">#id</th>
                                     <th scope="col">First Name</th>
