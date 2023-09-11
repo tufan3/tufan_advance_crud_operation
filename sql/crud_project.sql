@@ -70,11 +70,11 @@ CREATE TABLE `profile` (
 INSERT INTO `profile` (`id`, `fname`, `lname`, `profilePicture`, `district`, `date_of_birth`, `education`, `gender`, `comments`) VALUES
 (1, 'gtr', 'grt', 0x6d657373692e6a706567, 'Dhaka', '2023-09-07', 'bsc, msc', 'male', 'gtrg'),
 (2, 'robiul', 'islam', 0x312e6a706567, 'Khulna', '2023-08-05', 'bsc', 'male', 'tufan'),
-(42, '', '', 0x696d61676573322e6a706567, 'Dhaka', '2023-08-30', 'ssc, hsc, bsc, msc', 'male', 'hjtyhdfsx  '),
-(44, 'robiul', '', 0x342e6a706567, 'Barishal', '2023-09-13', 'hsc', 'male', 'y5g5'),
-(46, '', '', 0x322e6a706567, 'Sylhet', '2023-09-05', 'ssc, hsc', 'male', 'drdf'),
-(47, 'robiul', 'hjgh', 0x6e2e6a706567, 'Dhaka', '2023-09-04', 'ssc, hsc', 'male', 'ghg'),
-(48, 'Leo', 'Messi', 0x6d657373692e6a706567, 'Dhaka', '2023-09-07', 'ssc, hsc, bsc', 'male', 'Hi');
+(3, '', '', 0x696d61676573322e6a706567, 'Dhaka', '2023-08-30', 'ssc, hsc, bsc, msc', 'male', 'hjtyhdfsx  '),
+(4, 'robiul', '', 0x342e6a706567, 'Barishal', '2023-09-13', 'hsc', 'male', 'y5g5'),
+(5, '', '', 0x322e6a706567, 'Sylhet', '2023-09-05', 'ssc, hsc', 'male', 'drdf'),
+(6, 'robiul', 'hjgh', 0x6e2e6a706567, 'Dhaka', '2023-09-04', 'ssc, hsc', 'male', 'ghg'),
+(7, 'Leo', 'Messi', 0x6d657373692e6a706567, 'Dhaka', '2023-09-07', 'ssc, hsc, bsc', 'male', 'Hi');
 
 -- --------------------------------------------------------
 
@@ -96,10 +96,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `user_email`, `user_password`) VALUES
 (1, 'Robiul', 'Islam', 'robiul@gmail.com', '123456'),
-(4, 'Robiul', 'Islam', 'islam@gmail.com', '123456'),
-(6, 'Robiul', 'Islam', 'tufan@gmail.com', '123456'),
-(7, 'Robiul', 'Islam', 'tufan.com@gmail.com', '123456'),
-(8, 'Robiul', 'Islam', 'tufan@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
+(2, 'Robiul', 'Islam', 'islam@gmail.com', '123456'),
+(3, 'Robiul', 'Islam', 'tufan.com@gmail.com', '123456'),
+(4, 'Robiul', 'Islam', 'tufan@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
 
 --
 -- Indexes for dumped tables
