@@ -7,8 +7,9 @@ if (isset($_POST['submit'])) {
 
     $sql = "SELECT * FROM users WHERE user_email = '$user_email' AND user_password = '$user_password'";
     $result = $conn->query($sql);
+    $row = mysqli_fetch_assoc($result);
 
-    if ($result->num_rows > 0) {
+    if ($row || $result->num_rows > 0) {
         $_SESSION['user_email'] = $user_email;
         header("location:index.php");
     } else {

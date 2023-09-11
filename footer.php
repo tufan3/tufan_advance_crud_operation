@@ -60,11 +60,21 @@
                         </h5>
                         <div>
                             <div>
+                                <a class="underline_info" href="index.php">
+                                    Home
+                                </a>
+                            </div>
+                            <div>
                                 <a class="underline_info" href="about.php">
                                     About US
                                 </a>
                             </div>
 
+                            <div>
+                                <a class="underline_info" href="do.php">
+                                    What we do
+                                </a>
+                            </div>
                             <div>
                                 <a class="underline_info" href="portfolio.php">
                                     Portfolio

@@ -14,6 +14,8 @@ include 'database/connect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 
+    <link href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
     <?php
     include "link.php";
     ?>
@@ -27,17 +29,17 @@ include 'database/connect.php';
     <!--  add item-->
     <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog border border-3 border-success rounded-3 shadow-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="addModalLabel">Add info</h1>
+                <div class="modal-header bg-dark">
+                    <h1 class="modal-title fs-3 text-success mx-auto" id="addModalLabel">Add info</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                         &times;
                     </button>
                 </div>
 
                 <form action="add.php" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">
+                    <div class="modal-body mt-3">
                         <div class="name_design">
                             <div class="form-group mb-4 icon-design">
                                 <i class="fa-regular fa-user"></i>
@@ -51,33 +53,32 @@ include 'database/connect.php';
                                     placeholder="Last Name">
                             </div>
                         </div>
-                        <label for="profilePicture">Profile Picture:</label>
-                        <input type="file" id="profilePicture" name="profilePicture">
+                        <div class="form-group mb-4 icon-design">
+                            <label for="profilePicture">Profile Picture:</label>
+                            <input type="file" id="profilePicture" name="profilePicture">
+                        </div>
 
-                        <br><br>
-
-                        <label for="district">Select District:</label>
-                        <select id="district" name="district">
-                            <option value="Select a district" disabled selected>Select a District</option>
-                            <?php
-                            $sql = "SELECT district_id, district_name FROM districts";
-                            $result = $conn->query($sql);
-                            while ($row = $result->fetch_assoc()) {
-                                echo "<option value='{$row["district_name"]}'>
+                        <div class="form-group mb-4 icon-design">
+                            <label for="district">Select District:</label>
+                            <select id="district" name="district">
+                                <option value="Select a district" disabled selected>Select a District</option>
+                                <?php
+                                $sql = "SELECT district_id, district_name FROM districts";
+                                $result = $conn->query($sql);
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<option value='{$row["district_name"]}'>
                                 {$row["district_name"]}</option>";
-                            }
-                            ?>
-                            <option value="dhaka">dhaka</option>
-                        </select>
+                                }
+                                ?>
+                            </select>
+                        </div>
 
-                        <br><br>
+                        <div class="form-group mb-4 icon-design">
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" id="dob" name="dob">
+                        </div>
 
-                        <label for="dob">Date of Birth:</label>
-                        <input type="date" id="dob" name="dob">
-
-                        <br><br>
-
-                        <div>
+                        <div class="form-group mb-3 icon-design">
                             <label>Education:</label>
                             <input type="checkbox" id="ssc" name="education[]" value="ssc">
                             <label for="ssc">SSC</label>
@@ -89,7 +90,7 @@ include 'database/connect.php';
                             <label for="msc">MSc</label>
                         </div>
 
-                        <div>
+                        <div class="form-group mb-3 icon-design">
                             <label>Gender:</label>
                             <input type="radio" id="male" name="gender" value="male">
                             <label for="male">Male</label>
@@ -115,17 +116,17 @@ include 'database/connect.php';
     <!--  Update item-->
     <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog border border-3 border-success rounded-3 shadow-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="updateModalLabel">Update Info</h1>
+                <div class="modal-header bg-dark">
+                    <h1 class="modal-title fs-4 text-success mx-auto" id="updateModalLabel">Update Info</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                         &times;
                     </button>
                 </div>
 
                 <form action="update.php" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">
+                    <div class="modal-body mt-3">
                         <input type="hidden" name="update_id" id="update_id">
 
                         <div class="name_design">
@@ -143,39 +144,40 @@ include 'database/connect.php';
                         </div>
 
 
-                        <label class="form-label">Upload Image</label>
-                        <div class="col-2">
-                            <img class="preview_img" src="images/default_profile.jpg" width="100px" height="100px">
-                        </div>
-                        <div class="col-10">
-                            <div class="file-upload text-secondary">
-                                <input type="file" class="image" name="image" accept="image/*">
-                                <input type="hidden" name="image_old" id="image_old">
+                        <div class="form-group mb-4">
+                            <label class="form-label">Upload Image</label>
+                            <div class="col-2 mb-2">
+                                <img class="preview_img" src="images/default_profile.jpg" width="100px" height="100px">
+                            </div>
+                            <div class="col-10">
+                                <div class="file-upload text-secondary">
+                                    <input type="file" class="image" name="image" accept="image/*">
+                                    <input type="hidden" name="image_old" id="image_old">
+                                </div>
                             </div>
                         </div>
-                        <br><br>
 
 
-                        <label for="district">Select District:</label>
-                        <select id="update_district" name="district">
-                            <option value="Select a district" disabled selected>Select a District</option>
-                            <?php
-                            $sql = "SELECT district_id, district_name FROM districts";
-                            $result = $conn->query($sql);
-                            while ($row = $result->fetch_assoc()) {
-                                echo "<option value='{$row["district_name"]}'>{$row["district_name"]}</option>";
-                            }
-                            ?>
-                        </select>
+                        <div class="form-group mb-4">
+                            <label for="district">Select District:</label>
+                            <select id="update_district" name="district">
+                                <option value="Select a district" disabled selected>Select a District</option>
+                                <?php
+                                $sql = "SELECT district_id, district_name FROM districts";
+                                $result = $conn->query($sql);
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<option value='{$row["district_name"]}'>{$row["district_name"]}</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
 
-                        <br><br>
+                        <div class="form-group mb-3">
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" id="update_dob" name="dob" value="dob">
+                        </div>
 
-                        <label for="dob">Date of Birth:</label>
-                        <input type="date" id="update_dob" name="dob" value="dob">
-
-                        <br><br>
-
-                        <div id="checkboxContainer">
+                        <div class="form-group mb-3" id="checkboxContainer">
                             <label for='update_education'>Education:</label>
                             <input type="checkbox" id="ssc" name="update_education[]" value="ssc">
                             <label for="ssc">SSC</label>
@@ -187,16 +189,19 @@ include 'database/connect.php';
                             <label for="msc">MSc</label>
                         </div>
 
-                        <label>Gender:</label>
-                        <input type="radio" id="update_male" name="gender" value="male">
-                        <label for="male">Male</label>
-                        <input type="radio" id="update_female" name="gender" value="female">
-                        <label for="female">Female</label>
+                        <div class="form-group mb-3">
+                            <label>Gender:</label>
+                            <input type="radio" id="update_male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="update_female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
 
-                        <br><br>
-
-                        <label for="comments">Comments:</label>
-                        <textarea id="update_comments" name="comments" rows="4" cols="50"></textarea>
+                        <div class="form-group mb-3">
+                            <label for="comments">Comments:</label>
+                            <textarea class="p-3 rounded-2" id="update_comments" name="comments" rows="3"
+                                cols="50"></textarea>
+                        </div>
 
                     </div>
 
@@ -213,10 +218,10 @@ include 'database/connect.php';
 
     <!-- delete modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog border border-3 border-danger rounded-3 shadow-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="deleteModalLabel">Student Delete Data</h1>
+                <div class="modal-header bg-danger">
+                    <h1 class="modal-title fs-4 mx-auto text-white" id="deleteModalLabel">Delete Info</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
                 </div>
                 <form action="delete.php" method="POST">
@@ -237,7 +242,7 @@ include 'database/connect.php';
 
 
 
-    <div class="container-fluid mt-5">
+    <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -263,7 +268,7 @@ include 'database/connect.php';
                         </h2>
                     </div>
                     <div class="card-body">
-                        <table class="table table-bordered border-primary text-center">
+                        <table class="table table-bordered border-primary text-center" id="mytable">
                             <thead class="table-dark">
                                 <tr>
                                     <th scope="col">#id</th>
@@ -371,6 +376,14 @@ include 'database/connect.php';
                 $('#deleteModal').modal('show');
 
             });
+        });
+    </script>
+
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#mytable').DataTable();
         });
     </script>
 

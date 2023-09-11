@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_email'])) {
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Esigned</title>
+  <title>LEOTECH</title>
 
 
   <?php
@@ -52,14 +52,16 @@ if (!isset($_SESSION['user_email'])) {
           <div class="detail-box text-white">
             <div class="heading_container">
               <h2 class="mx-auto">
-                WHO WE ARE?
+                WHO AM I?
               </h2>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud
+            <p class="fs-5">
+              I am <b class="text-info">Md Robiul Islam Tufan</b>. I have completed my B.sc in CSE at Daffodil
+              International University.
+              My
+              keen interest in Front-End and Back-End Developer(PHP).
+              <br>
+              I can assure you that I am quick learner, adaptive as well as an energetic person.
             </p>
             <div>
               <a href="#">

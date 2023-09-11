@@ -29,10 +29,13 @@ if (!isset($_SESSION['user_email'])) {
 
 <body>
   <div class="hero_area">
+
+    <!-- header section -->
     <?php
     include "dashboardHeader.php";
     ?>
     <!-- end header section -->
+
     <!-- slider section -->
     <section class=" slider_section position-relative">
       <div class="container">
@@ -216,24 +219,26 @@ if (!isset($_SESSION['user_email'])) {
       <div class="row">
         <div class="col-md-5">
           <div class="img-box">
-            <img src="images/who-img.jpg" alt="">
+            <img src="images/about-us.jpeg" alt="">
           </div>
         </div>
         <div class="col-md-7">
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                WHO WE ARE?
+                WHO AM I?
               </h2>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud
+            <p class="fs-5">
+              I am Md Robiul Islam Tufan. I have completed my B.sc in CSE at Daffodil
+              International University.
+              My
+              keen interest in Front-End and Back-End Developer(PHP).
+              <br>
+              I can assure you that I am quick learner, adaptive as well as an energetic person.
             </p>
             <div>
-              <a href="">
+              <a style="text-decoration: none;" href="#">
                 Read More
               </a>
             </div>
@@ -361,7 +366,7 @@ if (!isset($_SESSION['user_email'])) {
         <div class="col-md-3 col-sm-6">
           <div class="detail-box">
             <h2>
-              1000+
+              10+
             </h2>
             <h5>
               Years of Business
@@ -371,7 +376,7 @@ if (!isset($_SESSION['user_email'])) {
         <div class="col-md-3 col-sm-6">
           <div class="detail-box">
             <h2>
-              20000+
+              200+
             </h2>
             <h5>
               Projects Delivered
@@ -381,7 +386,7 @@ if (!isset($_SESSION['user_email'])) {
         <div class="col-md-3 col-sm-6">
           <div class="detail-box">
             <h2>
-              10000+
+              150+
             </h2>
             <h5>
               Satisfied Customers
@@ -391,7 +396,7 @@ if (!isset($_SESSION['user_email'])) {
         <div class="col-md-3 col-sm-6">
           <div class="detail-box">
             <h2>
-              1500+
+              100+
             </h2>
             <h5>
               Cups of Coffee
@@ -445,7 +450,7 @@ if (!isset($_SESSION['user_email'])) {
               <div class="col-md-12 m-4 text-black">
                 <div class="info_contact">
                   <h5>
-                    Quick Contact
+                    Contact Us
                   </h5>
                   <div class="d-flex p-2">
                     <div class="img-box">

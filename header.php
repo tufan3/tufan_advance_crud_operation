@@ -13,9 +13,7 @@
         <div class="container-fluid navbar-dark fixed-top bg-dark">
             <nav class="navbar navbar-expand-lg custom_nav-container m-0">
                 <a class="navbar-brand" href="#">
-                    <span>
-                        Tufan
-                    </span>
+                    <h2>LEO<span class="text-info">TECH</span></h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -27,8 +25,9 @@
                     <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
 
                         <div class="user_option">
-                            <a href="login.php">
+                            <a class="underline_info" href="login.php">
                                 <img src="images/user.png" alt="">
+                                Login/SignUp
                             </a>
                         </div>
                     </div>

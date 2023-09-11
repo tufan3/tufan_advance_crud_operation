@@ -57,7 +57,7 @@ if (!isset($_SESSION['user_email'])) {
                   id="phone_number">
               </div>
               <div>
-                <input class="bg-white opacity-75" type="email" placeholder="Email Address" id="email" name="email"
+                <input class="bg-white opacity-75 " type="email" placeholder="Email Address" id="email" name="email"
                   required>
               </div>
               <div>
@@ -76,7 +76,7 @@ if (!isset($_SESSION['user_email'])) {
           <div class="col-md-12 m-4 text-white">
             <div class="info_contact">
               <h5>
-                Quick Contact
+                Contact Us
               </h5>
               <div class="d-flex gap-2 p-2">
                 <div class="img-box">
@@ -101,6 +101,24 @@ if (!isset($_SESSION['user_email'])) {
                 <p>
                   robiultufan.dev@gmail.com
                 </p>
+              </div>
+            </div>
+            <div class="info_form">
+              <div class="social_box fa-2x">
+                <a style="text-decoration: none;" class="social_box_icon me-3"
+                  href="https://www.facebook.com/robiul.tufan3/">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a style="text-decoration: none;" class="social_box_icon me-3" href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a style="text-decoration: none;" class="social_box_icon me-3"
+                  href="https://www.linkedin.com/in/tufan3/">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a style="text-decoration: none;" class="social_box_icon" href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
               </div>
             </div>
           </div>
