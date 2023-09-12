@@ -242,7 +242,7 @@ include 'database/connect.php';
 
 
 
-    <div class="container mt-5 mb-5">
+    <div class="container-fluid mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
